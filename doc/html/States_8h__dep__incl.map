@@ -1,0 +1,8 @@
+<map id="/home/johan/Workspace/Code/State Machine/include/States.h" name="/home/johan/Workspace/Code/State Machine/include/States.h">
+<area shape="rect" id="node2" href="$Machine_8h.html" title="/home/johan/Workspace\l/Code/State Machine/include\l/Machine.h" alt="" coords="88,109,279,165"/>
+<area shape="rect" id="node5" href="$AbstractState_8cpp.html" title="/home/johan/Workspace\l/Code/State Machine/src\l/States/AbstractState.cpp" alt="" coords="303,109,477,165"/>
+<area shape="rect" id="node6" href="$NormalState_8cpp.html" title="/home/johan/Workspace\l/Code/State Machine/src\l/States/NormalState.cpp" alt="" coords="501,109,668,165"/>
+<area shape="rect" id="node7" href="$SoldOutState_8cpp.html" title="/home/johan/Workspace\l/Code/State Machine/src\l/States/SoldOutState.cpp" alt="" coords="693,109,863,165"/>
+<area shape="rect" id="node3" href="$Machine_8cpp.html" title="/home/johan/Workspace\l/Code/State Machine/src\l/Machine.cpp" alt="" coords="5,213,172,269"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title="/home/johan/Workspace\l/Code/State Machine/src\l/main.cpp" alt="" coords="196,213,363,269"/>
+</map>

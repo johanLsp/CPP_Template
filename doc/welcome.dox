@@ -1,0 +1,22 @@
+/*
+        Organisation
+        (c) 2015-2020. All rights reserved.
+
+        Responsible authors:    [NAME]
+*/
+
+// doxygen documentation ______________________________________________________
+
+/*!
+
+@mainpage Documentation
+
+This document contains a technical introduction to StateMachine. It is designed to help readers with technical skills such as developers, testers or others get a starting point into StateMachine.
+
+The document has three sections:
+
+- @subpage User_Guide
+- @subpage Technical_Overview
+- @subpage Release_Notes
+
+*/

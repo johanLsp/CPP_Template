@@ -1,0 +1,4 @@
+<map id="SoldOut::refill" name="SoldOut::refill">
+<area shape="rect" id="node2" href="$classAbstractState.html#ae7e3c59532790d0460b5fb5ea7d8be95" title="AbstractState::setState" alt="" coords="167,5,325,32"/>
+<area shape="rect" id="node3" href="$classAbstractState.html#a9000442e065c9c9263b946276236e45c" title="AbstractState::updateStock" alt="" coords="155,56,337,83"/>
+</map>
