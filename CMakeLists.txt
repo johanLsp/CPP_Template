@@ -9,17 +9,12 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/../lib")
 project(StateMachine)
 set (CMAKE_CXX_STANDARD 11)
 include(CMakeToolsHelpers OPTIONAL)
-# This line finds the boost lib and headers. 
+
 set(Boost_NO_BOOST_CMAKE ON) #  Don't do a find_package in config mode before searching for a regular boost install.
-find_package(Boost COMPONENTS unit_test_framework program_options REQUIRED)
+find_package(Boost COMPONENTS unit_test_framework REQUIRED)
+add_definitions(--coverage)
 
-
-
-include_directories(
-    ${PROJECT_SOURCE_DIR}/include
-#    ${PROJECT_BINARY_DIR}/include   # add the binary tree to the search path so that we will find Version.h
-#    ${Boost_INCLUDE_DIRS}
-)
+include_directories(${PROJECT_SOURCE_DIR}/include)
 
 enable_testing()
 add_subdirectory(include)

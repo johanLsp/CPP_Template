@@ -16,6 +16,8 @@ set(LIBRARY_NAME StateMachine)
 
 # Define the library
 add_library(${LIBRARY_NAME} SHARED ${LIB_SOURCES})
+target_link_libraries(${LIBRARY_NAME} -lgcov)
 
 
 add_executable(runStateMachine ${SOURCES})
+target_link_libraries(runStateMachine -lgcov)
