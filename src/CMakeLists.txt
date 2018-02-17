@@ -1,26 +1,17 @@
-#include_directories(${StateMachine_SOURCE_DIR}/sr/inc)
-
-#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
-#set(EXECUTABLE_OUTPUT_PATH, ${PROJECT_BINARY_DIR}/bin)
-
+# Get all source files (bad practice !)
 file(GLOB_RECURSE SOURCES
     "*.cpp"
 )
 
-set(LIB_SOURCES ${SOURCES})
-
-list(REMOVE_ITEM LIB_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp)
-
 # Define two variables in order not to repeat ourselves.
-set(LIBRARY_NAME StateMachine)
+set(LIBRARY_NAME ${PROJECT_NAME})
 
 # Define the library
+set(LIB_SOURCES ${SOURCES})
+list(REMOVE_ITEM LIB_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp)
 add_library(${LIBRARY_NAME} SHARED ${LIB_SOURCES})
-if(ENABLE_COVERAGE)
-    target_link_libraries(${LIBRARY_NAME} -lgcov)
-endif()
 
-add_executable(runStateMachine ${SOURCES})
-if(ENABLE_COVERAGE)
-    target_link_libraries(runStateMachine -lgcov)
-endif()
+# Define the executable
+add_executable(${PROJECT_NAME}-bin ${SOURCES})
+# Two-step trick to end up with the same executable and library name (foo & libfoo)
+SET_TARGET_PROPERTIES(${PROJECT_NAME}-bin PROPERTIES OUTPUT_NAME ${PROJECT_NAME})
