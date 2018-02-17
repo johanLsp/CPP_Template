@@ -16,7 +16,7 @@ This a CMake based C++ template shipped with :
 Each of these features can be disabled / enabled if needed
 
 ## Pre-requisites
-You can skip this if you just want to use the CMake template without additional features
+You can skip this if you just want to use the CMake template without additional features.
 Otherwise, the following dependencies have to be installed :
 
     doxygen
@@ -68,7 +68,7 @@ The default Travis configuration automatically push the coverage report to CodeC
 
 
 ## Contributing
-If you think something is missing, feel free to open an issue.
+If you think something is missing, feel free to open an issue or give me a hint.
 To contribute to the repository :
     
 
