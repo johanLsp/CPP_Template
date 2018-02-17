@@ -5,6 +5,13 @@
 
 
 class AbstractState;
+
+/**
+ * \class Machine
+ * \brief A generic state machine implementation
+ *
+ * This class is meant as an example. 
+ */
 class Machine {
     friend class AbstractState;
     public:
