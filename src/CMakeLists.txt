@@ -16,8 +16,11 @@ set(LIBRARY_NAME StateMachine)
 
 # Define the library
 add_library(${LIBRARY_NAME} SHARED ${LIB_SOURCES})
-target_link_libraries(${LIBRARY_NAME} -lgcov)
-
+if(ENABLE_COVERAGE)
+    target_link_libraries(${LIBRARY_NAME} -lgcov)
+endif()
 
 add_executable(runStateMachine ${SOURCES})
-target_link_libraries(runStateMachine -lgcov)
+if(ENABLE_COVERAGE)
+    target_link_libraries(runStateMachine -lgcov)
+endif()

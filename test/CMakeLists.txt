@@ -8,7 +8,9 @@ foreach(FILE ${TEST_FILES})
     string(REGEX REPLACE "[./]" "_" NAME ${FILE}) # create exe name
     add_executable(${NAME} ${FILE})
     target_link_libraries(${NAME} StateMachine ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY}) # link against our lib and boost test
-    target_link_libraries(${NAME} -lgcov)
+   if(ENABLE_COVERAGE)
+        target_link_libraries(${NAME} -lgcov)
+    endif()
     add_test(NAME ${NAME} COMMAND ${NAME})                              # this is how to add tests to CMake
 endforeach(FILE ${TEST_FILES})
 

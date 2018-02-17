@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 2.8)
 
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/../bin")
@@ -12,8 +12,12 @@ include(CMakeToolsHelpers OPTIONAL)
 
 set(Boost_NO_BOOST_CMAKE ON) #  Don't do a find_package in config mode before searching for a regular boost install.
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
-add_definitions(--coverage)
 
+option(ENABLE_COVERAGE "Generate coverage information" OFF)
+
+if(ENABLE_COVERAGE)
+    add_definitions(--coverage)
+endif()
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
 enable_testing()

@@ -1,0 +1,35 @@
+language: cpp
+compiler: gcc
+
+
+matrix:
+  include:
+    - os: linux
+      sudo: false
+      dist: trusty
+      compiler: gcc
+      env: ENABLE_COVERAGE=1
+
+    - os: linux
+      sudo: false
+      dist: precise
+      compiler: gcc
+
+    - os: osx
+      compiler: xcode6.4
+
+    - os: osx
+      compiler: xcode8
+addons:
+  apt:
+    packages:
+      - cmake
+      - libboost-dev
+      - libboost-test-dev
+
+script:
+  - mkdir build
+  - cd build
+  - cmake ..
+  - make -j 2
+  - make test
