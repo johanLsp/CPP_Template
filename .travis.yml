@@ -7,7 +7,7 @@ matrix:
       sudo: false
       dist: trusty
       compiler: gcc
-      env: CMAKE_BUILD_TYPE=Coverage
+      env: CMAKE_CMD_OPTION="-DCMAKE_BUILD_TYPE=Coverage"
 
     - os: linux
       sudo: false
@@ -25,11 +25,12 @@ addons:
       - cmake
       - libboost-dev
       - libboost-test-dev
+      - lcov
 
 script:
   - mkdir build
   - cd build
-  - cmake ..
+  - cmake .. $CMAKE_CMD_OPTION
   - make -j 2
   - make test
 
@@ -42,3 +43,7 @@ after_success:
   - lcov --list coverage.info #debug info
   # Uploading report to CodeCov
   - bash <(curl -s https://codecov.io/bash) || echo "Codecov did not collect coverage reports"
+
+# Disable notifications
+notifications:
+  email: false

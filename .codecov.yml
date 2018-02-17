@@ -13,7 +13,7 @@ coverage:
 
 
 codecov:
-  branch: develop
+  branch: master
 
 comment:
   layout: "diff"
