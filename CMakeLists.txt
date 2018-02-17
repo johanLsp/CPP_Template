@@ -11,16 +11,18 @@ option(ENABLE_DOC "Generates the documentation target" OFF)
 option(ENABLE_COVERAGE "Generates the coverage build" OFF)
 option(ENABLE_TESTING "Turns on testing" OFF)
 
-# Set default build type to debug
-if(NOT CMAKE_BUILD_TYPE)
-    message(STATUS "No build type selected, default to Debug")
-    set(CMAKE_BUILD_TYPE "Debug" CACHE STRING "Choose the type of build, options are: Debug Release RelWithDebInfo MinSizeRel." FORCE)
-endif()
-
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 include_directories(include)
-add_subdirectory(src)
+
+# Enable code coverage with -DENABLE_COVERAGE=1
+if(ENABLE_COVERAGE)
+    set(CMAKE_BUILD_TYPE "Coverage")
+    include(CodeCoverage)
+    setup_target_for_coverage(${PROJECT_NAME}_coverage ${PROJECT_NAME}_test coverage)
+    add_definitions("-Wall -pedantic -g -O0 -fprofile-arcs -ftest-coverage")
+endif()
+
 
 # Enable documentation with -DENABLE_DOC=1
 if(ENABLE_DOC)
@@ -33,9 +35,4 @@ if(ENABLE_TESTING OR ENABLE_COVERAGE)
     add_subdirectory(test)
 endif()
 
-# Enable code coverage with -DENABLE_COVERAGE=1
-if(ENABLE_COVERAGE)
-    include(CodeCoverage)
-    setup_target_for_coverage(${PROJECT_NAME}_coverage ${PROJECT_NAME}_test coverage)
-    add_definitions("-Wall -pedantic -g -O0 -fprofile-arcs -ftest-coverage")
-endif()
+add_subdirectory(src)

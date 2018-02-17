@@ -42,18 +42,18 @@ The CMake configuration accepts the following options :
 ## Features
 ### Documentation
 
-    cmake -DENABLE_DOC=1
+    cmake -DENABLE_DOC=1 ..
     make doc
 Generates the doxygen documentation in doc/html
 A base doxygen configuration is provided in [doc/documentation-config.doxygen.in](doc/documentation-config.doxygen.in), along with a few page templates.
 
 ### Unit testing
-    cmake -DENABLE_TESTING=1
+    cmake -DENABLE_TESTING=1 ..
     make test
   Runs the tests defined in [test](test)
 
 ### Code Coverage
-    cmake -DENABLE_COVERAGE=1
+    cmake -DENABLE_COVERAGE=1 ..
     make test
  Enabling code coverage automatically enables unit testing. Running the test generates a coverage report
 
