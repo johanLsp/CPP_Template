@@ -1,7 +1,0 @@
-<map id="main" name="main">
-<area shape="rect" id="node2" href="$classMachine.html#a2f4e635d0b36b24ffbec50b47a59eb1d" title="Machine::getCurrentStock" alt="" coords="104,5,279,32"/>
-<area shape="rect" id="node3" href="$classMachine.html#acf4234894092f6a5e699fed899537808" title="Machine::refill" alt="" coords="140,56,243,83"/>
-<area shape="rect" id="node5" href="$classMachine.html#a012754be9fddbe653fcac0aeeb546fbe" title="Machine::sell" alt="" coords="142,107,241,133"/>
-<area shape="rect" id="node4" href="$classAbstractState.html#a256bf20f9fdc2a6b338383deb1e45a4b" title="AbstractState::refill" alt="" coords="327,56,461,83"/>
-<area shape="rect" id="node6" href="$classAbstractState.html#a497c7f25129eac2b055ca95c3d0d5731" title="AbstractState::sell" alt="" coords="329,107,459,133"/>
-</map>

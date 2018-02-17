@@ -1,5 +1,0 @@
-<map id="Normal::sell" name="Normal::sell">
-<area shape="rect" id="node2" href="$classMachine.html#a2f4e635d0b36b24ffbec50b47a59eb1d" title="Machine::getCurrentStock" alt="" coords="149,5,324,32"/>
-<area shape="rect" id="node3" href="$classAbstractState.html#ae7e3c59532790d0460b5fb5ea7d8be95" title="AbstractState::setState" alt="" coords="157,56,316,83"/>
-<area shape="rect" id="node4" href="$classAbstractState.html#a9000442e065c9c9263b946276236e45c" title="AbstractState::updateStock" alt="" coords="145,107,328,133"/>
-</map>

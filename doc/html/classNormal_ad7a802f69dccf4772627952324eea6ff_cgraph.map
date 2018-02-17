@@ -1,4 +1,0 @@
-<map id="Normal::refill" name="Normal::refill">
-<area shape="rect" id="node2" href="$classMachine.html#a2f4e635d0b36b24ffbec50b47a59eb1d" title="Machine::getCurrentStock" alt="" coords="153,5,328,32"/>
-<area shape="rect" id="node3" href="$classAbstractState.html#a9000442e065c9c9263b946276236e45c" title="AbstractState::updateStock" alt="" coords="149,56,332,83"/>
-</map>

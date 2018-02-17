@@ -1,4 +1,0 @@
-<map id="AbstractState" name="AbstractState">
-<area shape="rect" id="node2" href="$classNormal.html" title="{Normal\n||+ sell()\l+ refill()\l+ ~Normal()\l}" alt="" coords="5,189,97,296"/>
-<area shape="rect" id="node3" href="$classSoldOut.html" title="{SoldOut\n||+ sell()\l+ refill()\l+ ~SoldOut()\l}" alt="" coords="121,189,219,296"/>
-</map>
