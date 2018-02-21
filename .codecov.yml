@@ -18,5 +18,6 @@ codecov:
 comment:
   layout: "diff"
 
-#coverage:
-#  ignore:
+coverage:
+  ignore: 
+    - "test"  # ignore folders and all its contents

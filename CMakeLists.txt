@@ -20,7 +20,6 @@ if(ENABLE_COVERAGE)
     set(CMAKE_BUILD_TYPE "Coverage")
     include(CodeCoverage)
     setup_target_for_coverage(${PROJECT_NAME}_coverage ${PROJECT_NAME}_test coverage)
-    #add_definitions("-Wall -pedantic -g -O0 -fprofile-arcs -ftest-coverage")
 endif()
 
 
