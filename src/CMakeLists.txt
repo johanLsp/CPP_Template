@@ -9,7 +9,7 @@ set(LIBRARY_NAME ${PROJECT_NAME})
 # Define the library
 set(LIB_SOURCES ${SOURCES})
 list(REMOVE_ITEM LIB_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp)
-add_library(${LIBRARY_NAME} SHARED ${LIB_SOURCES})
+add_library(${LIBRARY_NAME} STATIC ${LIB_SOURCES})
 
 # Define the executable
 add_executable(${PROJECT_NAME}-bin ${SOURCES})

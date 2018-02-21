@@ -11,11 +11,6 @@ matrix:
       compiler: gcc
       env: CMAKE_CMD_OPTION="-DENABLE_COVERAGE=1"
 
-    - os: linux
-      sudo: false
-      dist: precise
-      compiler: gcc
-
     - os: osx
       compiler: xcode6.4
 
