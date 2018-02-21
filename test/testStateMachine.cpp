@@ -1,39 +1,33 @@
 // testStateMAchine.cpp
+#define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
+#include "catch.hpp"
 #include "Machine.h"
 
-#define BOOST_TEST_MODULE hello test
-#define BOOST_TEST_MAIN
-#define BOOST_TEST_DYN_LINK
-#include <boost/test/unit_test.hpp>
-#include <assert.h>
-
-
-
-BOOST_AUTO_TEST_CASE(arithmetic_test)
+TEST_CASE("Testing basic arithmetic", "[arithmetic]")
 {
   int a = 1;
   int b = 2;
-  BOOST_CHECK_NE(a, b);
+  REQUIRE(a != b);
   b = a;
-  BOOST_CHECK_EQUAL(a, b);
+  REQUIRE(a == b);
 }
 
 
 
-BOOST_AUTO_TEST_CASE(sell_test)
+TEST_CASE("Sell", "[action]")
 {
     Machine machine(10);
     machine.sell(3);
 
     int stock = machine.getCurrentStock();
-    BOOST_CHECK_EQUAL(stock, 7);
+    REQUIRE(stock == 7);
 }
 
-BOOST_AUTO_TEST_CASE(refill_test)
+TEST_CASE("Refill", "[action]")
 {
     Machine machine(10);
     machine.refill(10);
 
     int stock = machine.getCurrentStock();
-    BOOST_CHECK_EQUAL(stock, 20);
+    REQUIRE(stock == 20);
 }
