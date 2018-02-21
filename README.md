@@ -1,15 +1,15 @@
 # C++ Template
 > Jumpstart a C++ project in no time
 
-[![Build Status](https://travis-ci.org/johanLsp/CPP_Template.svg?branch=master)](https://travis-ci.org/johanLsp/CPP_Template) [![codecov](https://codecov.io/gh/johanLsp/CPP_Template/branch/master/graph/badge.svg)](https://codecov.io/gh/johanLsp/CPP_Template) 
+[![Build Status](https://travis-ci.org/johanLsp/CPP_Template.svg?branch=master)](https://travis-ci.org/johanLsp/CPP_Template) [![Build status](https://ci.appveyor.com/api/projects/status/lh6a93nw50rxq3f7/branch/master?svg=true)](https://ci.appveyor.com/project/johanLsp/cpp-template)  [![codecov](https://codecov.io/gh/johanLsp/CPP_Template/branch/master/graph/badge.svg)](https://codecov.io/gh/johanLsp/CPP_Template) 
 <img src="https://travis-ci.com/images/logos/TravisCI-Mascot-1.png" width="50">
 <img src="https://github.com/codecov/media/blob/master/logos/icon-50.png" width="50">
 
 
-This a CMake based C++ template shipped with :
+This is a cross-plateform (Linux/OSX/Windows) CMake based C++ template shipped with :
 
- - Continuous Integration with Travis CI
- - Unit testing with Boost Test
+ - Continuous Integration with Travis CI & Appveyor
+ - Unit testing with Catch
  - Documentation with Doxygen
  - Code coverage with CodeCov
 
@@ -59,7 +59,11 @@ A base doxygen configuration is provided in [doc/documentation-config.doxygen.in
 
 ### Travis CI
 Integration with Travis CI is configured in [.travis.yml](.travis.yml)
-The default configuration builds and run tests on on different version of Ubuntu & OSX, and generate a coverage report
+The default configuration builds and run tests on different version of Ubuntu & OSX, and generate a coverage report
+
+### Appveyor
+Integration with Appveyor is configured in [appveyor.yml](appveyor.yml)
+The default configuration builds and run tests on different Visual Studio generators
 
 ### CodeCov
 
