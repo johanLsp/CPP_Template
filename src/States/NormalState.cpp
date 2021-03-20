@@ -1,8 +1,6 @@
-// NormalState.h
 #include "States.h"
 
-Normal::~Normal() {
-}
+#include <stdexcept>
 
 void Normal::sell(Machine& machine, int quantity) {
     int currStock = machine.getCurrentStock();

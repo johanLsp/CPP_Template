@@ -1,32 +1,28 @@
-// States.h
 #pragma once
 
+#include <memory>
+
 #include "Machine.h"
-#include <exception>
-#include <stdexcept>
 
 class Machine;
 
-class AbstractState {
+class State {
     public:
         virtual void sell(Machine& machine, int quantity) = 0;
         virtual void refill(Machine& machine, int quantity) = 0;
-        virtual ~AbstractState();
     protected:
-        void setState(Machine& machine, AbstractState* st);
+        void setState(Machine& machine, State* state);
         void updateStock(Machine& machine, int quantity);
 };
 
-class Normal : public AbstractState {
+class Normal : public State {
     public:
-        virtual void sell(Machine& machine, int quantity);
-        virtual void refill(Machine& machine, int quantity);
-        virtual ~Normal();
+        void sell(Machine& machine, int quantity) override;
+        void refill(Machine& machine, int quantity) override;
 };
 
-class SoldOut : public AbstractState {
+class SoldOut : public State {
     public:
-        virtual void sell(Machine& machine, int quantity);
-        virtual void refill(Machine& machine, int quantity);
-        virtual ~SoldOut();
+        void sell(Machine& machine, int quantity) override;
+        void refill(Machine& machine, int quantity) override;
 };

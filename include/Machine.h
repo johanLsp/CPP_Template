@@ -1,10 +1,10 @@
-// Machine.h
 #pragma once
+
+#include <memory>
 
 #include "States.h"
 
-
-class AbstractState;
+class State;
 
 /**
  * \class Machine
@@ -13,14 +13,13 @@ class AbstractState;
  * This class is meant as an example. 
  */
 class Machine {
-    friend class AbstractState;
+    friend class State;
     public:
-        Machine(int inStockQuantity);
+        explicit Machine(int inStockQuantity);
         void sell(int quantity);
         void refill(int quantity);
         int getCurrentStock();
-        ~Machine();
     private:
         int mStockQuantity;
-        AbstractState* mState;
+        std::unique_ptr<State> mState;
 };

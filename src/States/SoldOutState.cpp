@@ -1,9 +1,6 @@
-// SoldOutState.h
-
 #include "States.h"
 
-SoldOut::~SoldOut() {
-}
+#include <stdexcept>
 
 void SoldOut::sell(Machine& machine, int quantity) {
     throw std::runtime_error("Sold out!");

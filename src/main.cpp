@@ -1,10 +1,9 @@
-// main.cpp
 #include <iostream>
+
 #include "Machine.h"
 
 
-int main(int argc, char** argv)
-{
+int main(int argc, char** argv) {
     Machine m(10);
 
     m.sell(10);

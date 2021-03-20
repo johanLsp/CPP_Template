@@ -1,12 +1,7 @@
-// Machine.cpp
 #include "Machine.h"
 
 Machine::Machine(int inStockQuantity) :
     mStockQuantity(inStockQuantity), mState(new Normal()) {
-}
-
-Machine::~Machine() {
-    delete mState;
 }
 
 void Machine::sell(int quantity) {
