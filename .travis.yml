@@ -7,9 +7,14 @@ matrix:
   include:
     - os: linux
       sudo: false
-      dist: trusty
+      dist: focal
       compiler: gcc
       env: CMAKE_CMD_OPTION="-DENABLE_COVERAGE=1"
+
+    - os: linux
+      sudo: false
+      dist: trusty
+      compiler: gcc
 
     - os: osx
       compiler: xcode6.4

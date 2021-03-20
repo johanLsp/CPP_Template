@@ -1,14 +1,15 @@
 version: '{build}'
 
-image: Visual Studio 2017
-
 environment:
   matrix:
-    - GENERATOR: "Visual Studio 14"
+    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
+      GENERATOR: "Visual Studio 14 2015"
       CONFIG: Debug
 
-    - GENERATOR: "Visual Studio 15 Win64"
+    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
+      GENERATOR: "Visual Studio 16 2019"
       CONFIG: Release
+      ARCH_ARG: "-A x64"
 
 build_script:
   - cmake "-G%GENERATOR%" -H. -B_builds -DENABLE_TESTING=1
