@@ -3,7 +3,7 @@
 
 [![Build Status](https://travis-ci.org/johanLsp/CPP_Template.svg?branch=master)](https://travis-ci.org/johanLsp/CPP_Template) [![Build status](https://ci.appveyor.com/api/projects/status/lh6a93nw50rxq3f7/branch/master?svg=true)](https://ci.appveyor.com/project/johanLsp/cpp-template)  [![codecov](https://codecov.io/gh/johanLsp/CPP_Template/branch/master/graph/badge.svg)](https://codecov.io/gh/johanLsp/CPP_Template) 
 <img src="https://travis-ci.com/images/logos/TravisCI-Mascot-1.png" width="50">
-<img src="https://github.com/codecov/media/blob/master/logos/icon-50.png" width="50">
+<img src="https://github.com/codecov/media/blob/f0bde04970ea7e10fe7c647344a988cc89fa07f9/logos/codecov%20logo%20mark%20pink.svg" width="50">
 
 
 This is a cross-plateform (Linux/OSX/Windows) CMake based C++ template shipped with :
