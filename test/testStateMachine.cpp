@@ -2,6 +2,8 @@
 #include "catch.hpp"
 #include "Machine.h"
 
+using Catch::Matchers::Contains;
+
 TEST_CASE("Testing basic arithmetic", "[arithmetic]") {
   int a = 1;
   int b = 2;
@@ -24,4 +26,20 @@ TEST_CASE("Refill", "[action]") {
 
     int stock = machine.getCurrentStock();
     REQUIRE(stock == 20);
+}
+
+TEST_CASE("Not enough", "[action]") {
+    Machine machine(5);
+    REQUIRE_THROWS_WITH(machine.sell(10), Contains("Not enough stock"));
+}
+
+TEST_CASE("Sold out", "[action]") {
+    Machine machine(5);
+    machine.sell(5);
+    REQUIRE_THROWS_WITH(machine.sell(1), Contains("Sold out"));
+}
+
+TEST_CASE("Empty", "[action]") {
+    Machine machine(0);
+    REQUIRE_THROWS_WITH(machine.sell(1), Contains("Sold out"));
 }

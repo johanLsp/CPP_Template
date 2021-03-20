@@ -1,7 +1,12 @@
 #include "Machine.h"
 
 Machine::Machine(int inStockQuantity) :
-    mStockQuantity(inStockQuantity), mState(new Normal()) {
+    mStockQuantity(inStockQuantity) {
+  if (inStockQuantity > 0) {
+    mState.reset(new Normal());
+  } else {
+    mState.reset(new SoldOut());
+  }
 }
 
 void Machine::sell(int quantity) {
